@@ -14,12 +14,12 @@ body {
 h1 {
   font-size: 2.1rem;
 }
-@media (min-width: 800px) {
+@media (min-width: 500px) {
   h1 {
     font-size: 2.8rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
   h1 {
     font-size: 3.5rem;
   }
@@ -27,12 +27,12 @@ h1 {
 h2 {
   font-size: 1.54rem;
 }
-@media (min-width: 800px) {
+@media (min-width: 500px) {
   h2 {
     font-size: 1.68rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
   h2 {
     font-size: 1.82rem;
   }
@@ -41,13 +41,16 @@ a {
   color: #47525d;
   text-decoration: none;
 }
+p {
+  line-height: 1.25;
+}
 .wrapper {
   padding: 3rem 5%;
   width: 100%;
 }
-@media (min-width: 960px) {
+@media (min-width: 800px) {
   .wrapper {
-    max-width: 960px;
+    max-width: 800px;
     margin: 0 auto;
   }
 }
