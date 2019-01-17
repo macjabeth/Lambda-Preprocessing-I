@@ -1,7 +1,4 @@
 @import 'reset.css';
-.theme {
-  background-color: #eaeaea;
-}
 * {
   box-sizing: border-box;
 }
@@ -11,58 +8,45 @@ html {
 body {
   background-color: #eaeaea;
   height: 100%;
-  font-family: 'Charm', cursive, sans-serif;
-  font-size: 2rem;
+  font-family: 'Yatra One', cursive, sans-serif;
+  font-size: 1.4rem;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 2.1rem;
 }
 @media (min-width: 800px) {
   h1 {
-    font-size: 4rem;
+    font-size: 2.8rem;
   }
 }
 @media (min-width: 1024px) {
   h1 {
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
 }
 h2 {
-  font-size: 2.2rem;
+  font-size: 1.54rem;
 }
 @media (min-width: 800px) {
   h2 {
-    font-size: 2.4rem;
+    font-size: 1.68rem;
   }
 }
 @media (min-width: 1024px) {
   h2 {
-    font-size: 2.6rem;
+    font-size: 1.82rem;
   }
 }
 a {
   color: #47525d;
   text-decoration: none;
 }
-.l-segment {
-  background-color: #a89b9d;
-  border-radius: 1rem;
-  border: 0.25rem solid #2a2c24;
-  margin: 0.5rem 0;
-  padding: 4rem 6%;
-}
-.l-horizon h2 {
-  border-bottom: 0.1rem solid #eaeaea;
-  padding-bottom: 1.5rem;
-  margin-bottom: 1.5rem;
-}
 .wrapper {
-  padding: 8% 5%;
+  padding: 3rem 5%;
   width: 100%;
 }
 @media (min-width: 960px) {
   .wrapper {
-    padding: 3% 5%;
     max-width: 960px;
     margin: 0 auto;
   }
@@ -73,12 +57,7 @@ a {
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: row;
-  margin-bottom: 8%;
-}
-@media (min-width: 960px) {
-  .wrapper > .header {
-    margin-bottom: 5%;
-  }
+  margin-bottom: 3rem;
 }
 .wrapper > .header > .navigation > a {
   margin: 0 1.8rem;
@@ -103,7 +82,7 @@ a {
 }
 .wrapper > main > .intro > figure > img {
   border-radius: 50%;
-  border: 0.2rem solid #9a8683;
+  border: 0.2rem dashed #9a8683;
   width: 100%;
 }
 .wrapper > main > .intro > .intro-header {
@@ -126,7 +105,7 @@ a {
   color: whitesmoke;
   font-weight: bold;
   padding: 0.8rem 1.6rem;
-  font-family: 'Charm', cursive, sans-serif;
+  font-family: 'Yatra One', cursive, sans-serif;
 }
 .wrapper > main > .about {
   background-color: #a89b9d;

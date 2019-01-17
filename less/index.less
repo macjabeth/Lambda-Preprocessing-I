@@ -7,7 +7,7 @@
 @bg-segment: #a89b9d;
 @border-segment: #2a2c24;
 
-@base-fs: 2rem;
+@base-fs: 1.4rem;
 
 // Mixins \\
 
@@ -19,8 +19,26 @@
 	flex-direction: @direction;
 }
 
-.theme {
+.m-theme() {
 	background-color: @bg-main;
+}
+
+// Mixins - Layout \\
+
+.l-segment() {
+	background-color: @bg-segment;
+	border-radius: 1rem;
+	border: .25rem solid @border-segment;
+	margin: .5rem 0;
+	padding: 4rem 6%;
+}
+
+.l-horizon() {
+	h2 {
+		border-bottom: .1rem solid @bg-main;
+		padding-bottom: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
 }
 
 // Base \\
@@ -34,9 +52,9 @@ html {
 }
 
 body {
-	.theme;
+	.m-theme;
 	height: 100%;
-	font-family: 'Charm', cursive, sans-serif;
+	font-family: 'Yatra One', cursive, sans-serif;
 	font-size: @base-fs;
 }
 
@@ -69,43 +87,20 @@ a {
 	text-decoration: none;
 }
 
-// Layout \\
-
-.l-segment {
-	background-color: @bg-segment;
-	border-radius: 1rem;
-	border: .25rem solid @border-segment;
-	margin: .5rem 0;
-	padding: 4rem 6%;
-}
-
-.l-horizon {
-	h2 {
-		border-bottom: .1rem solid @bg-main;
-		padding-bottom: 1.5rem;
-		margin-bottom: 1.5rem;
-	}
-}
-
 // Modules \\
 
 .wrapper {
-	padding: 8% 5%;
+	padding: 3rem 5%;
 	width: 100%;
 
 	@media (min-width: 960px) {
-		padding: 3% 5%;
 		max-width: 960px;
 		margin: 0 auto;
 	}
 
 	> .header {
 		.m-flex;
-		margin-bottom: 8%;
-
-		@media (min-width: 960px) {
-			margin-bottom: 5%;
-		}
+		margin-bottom: 3rem;
 
 		> .navigation {
 			> a {
@@ -126,7 +121,7 @@ a {
 				width: 30%;
 				> img {
 					border-radius: 50%;
-					border: .2rem solid #9a8683;
+					border: .2rem dashed #9a8683;
 					width: 100%;
 				}
 			}
@@ -151,7 +146,7 @@ a {
 					color: whitesmoke;
 					font-weight: bold;
 					padding: .8rem 1.6rem;
-					font-family: 'Charm', cursive, sans-serif;
+					font-family: 'Yatra One', cursive, sans-serif;
 				}
 			}
 		}
