@@ -1,1 +1,200 @@
-/* Compile your LESS file! */
+@import 'reset.css';
+.theme {
+  background-color: #eaeaea;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #eaeaea;
+  height: 100%;
+  font-family: 'Charm', cursive, sans-serif;
+  font-size: 2rem;
+}
+h1 {
+  font-size: 3rem;
+}
+@media (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+h2 {
+  font-size: 2.2rem;
+}
+@media (min-width: 800px) {
+  h2 {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 2.6rem;
+  }
+}
+a {
+  color: #47525d;
+  text-decoration: none;
+}
+.l-segment {
+  background-color: #a89b9d;
+  border-radius: 1rem;
+  border: 0.25rem solid #2a2c24;
+  margin: 0.5rem 0;
+  padding: 4rem 6%;
+}
+.l-horizon h2 {
+  border-bottom: 0.1rem solid #eaeaea;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.wrapper {
+  padding: 8% 5%;
+  width: 100%;
+}
+@media (min-width: 960px) {
+  .wrapper {
+    padding: 3% 5%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+.wrapper > .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-bottom: 8%;
+}
+@media (min-width: 960px) {
+  .wrapper > .header {
+    margin-bottom: 5%;
+  }
+}
+.wrapper > .header > .navigation > a {
+  margin: 0 1.8rem;
+}
+.wrapper > .header > .navigation > a:hover {
+  text-decoration: underline;
+}
+.wrapper > main > .intro {
+  background-color: #a89b9d;
+  border-radius: 1rem;
+  border: 0.25rem solid #2a2c24;
+  margin: 0.5rem 0;
+  padding: 4rem 6%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.wrapper > main > .intro > figure {
+  width: 30%;
+}
+.wrapper > main > .intro > figure > img {
+  border-radius: 50%;
+  border: 0.2rem solid #9a8683;
+  width: 100%;
+}
+.wrapper > main > .intro > .intro-header {
+  padding: 5% 0 0 5%;
+  width: 70%;
+}
+.wrapper > main > .intro > .intro-header > h1 {
+  margin-bottom: 1rem;
+}
+.wrapper > main > .intro > .intro-content {
+  width: 100%;
+}
+.wrapper > main > .intro > .intro-content > p {
+  margin: 2rem 0;
+}
+.wrapper > main > .intro > .intro-content > button {
+  background-color: #575a4b;
+  border-radius: 0.5rem;
+  border: none;
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 0.8rem 1.6rem;
+  font-family: 'Charm', cursive, sans-serif;
+}
+.wrapper > main > .about {
+  background-color: #a89b9d;
+  border-radius: 1rem;
+  border: 0.25rem solid #2a2c24;
+  margin: 0.5rem 0;
+  padding: 4rem 6%;
+}
+.wrapper > main > .about h2 {
+  border-bottom: 0.1rem solid #eaeaea;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.wrapper > main > .skills {
+  background-color: #a89b9d;
+  border-radius: 1rem;
+  border: 0.25rem solid #2a2c24;
+  margin: 0.5rem 0;
+  padding: 4rem 6%;
+}
+.wrapper > main > .skills h2 {
+  border-bottom: 0.1rem solid #eaeaea;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.wrapper > main > .skills > ul {
+  list-style: georgian inside url('img/bullet.svg');
+  line-height: 2;
+}
+.wrapper > main > .work-history {
+  background-color: #a89b9d;
+  border-radius: 1rem;
+  border: 0.25rem solid #2a2c24;
+  margin: 0.5rem 0;
+  padding: 4rem 6%;
+}
+.wrapper > main > .work-history h2 {
+  border-bottom: 0.1rem solid #eaeaea;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.wrapper > main > .work-history > .work-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+}
+.wrapper > main > .work-history > .work-table > .work-row {
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 20%;
+}
+.wrapper > main > .work-history > .work-table > .work-row > span {
+  margin-bottom: 3rem;
+}
+.wrapper > main > .work-history > .work-table > .work-row > span:last-child {
+  margin-bottom: 0;
+}
+.wrapper > main > .work-history > .work-table > .work-row > span:first-child {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+.is-selected {
+  color: #29292b;
+  text-decoration: underline;
+}

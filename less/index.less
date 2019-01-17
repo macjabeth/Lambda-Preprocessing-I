@@ -1,59 +1,200 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+// Imports \\
+@import 'reset.css';
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+// Variables \\
+
+@bg-main: #eaeaea;
+@bg-segment: #a89b9d;
+@border-segment: #2a2c24;
+
+@base-fs: 2rem;
+
+// Mixins \\
+
+.m-flex(@justify: center, @align: center, @wrap: nowrap, @direction: row) {
+	display: flex;
+	justify-content: @justify;
+	align-items: @align;
+	flex-wrap: @wrap;
+	flex-direction: @direction;
 }
 
-/* Set every element's box-sizing to border-box */
+.theme {
+	background-color: @bg-main;
+}
+
+// Base \\
+
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html {
+	font-size: 62.5%;
 }
 
+body {
+	.theme;
+	height: 100%;
+	font-family: 'Charm', cursive, sans-serif;
+	font-size: @base-fs;
+}
+
+h1 {
+	font-size: @base-fs * 1.5;
+
+	@media (min-width: 800px) {
+		font-size: @base-fs * 2;
+	}
+
+	@media (min-width: 1024px) {
+		font-size: @base-fs * 2.5;
+	}
+}
+
+h2 {
+	font-size: @base-fs * 1.1;
+
+	@media (min-width: 800px) {
+		font-size: @base-fs * 1.2;
+	}
+
+	@media (min-width: 1024px) {
+		font-size: @base-fs * 1.3;
+	}
+}
+
+a {
+	color: #47525d;
+	text-decoration: none;
+}
+
+// Layout \\
+
+.l-segment {
+	background-color: @bg-segment;
+	border-radius: 1rem;
+	border: .25rem solid @border-segment;
+	margin: .5rem 0;
+	padding: 4rem 6%;
+}
+
+.l-horizon {
+	h2 {
+		border-bottom: .1rem solid @bg-main;
+		padding-bottom: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+}
+
+// Modules \\
+
+.wrapper {
+	padding: 8% 5%;
+	width: 100%;
+
+	@media (min-width: 960px) {
+		padding: 3% 5%;
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	> .header {
+		.m-flex;
+		margin-bottom: 8%;
+
+		@media (min-width: 960px) {
+			margin-bottom: 5%;
+		}
+
+		> .navigation {
+			> a {
+				margin: 0 1.8rem;
+			}
+			> a:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	> main {
+		> .intro {
+			.l-segment;
+			.m-flex(flex-start, center, wrap);
+
+			> figure {
+				width: 30%;
+				> img {
+					border-radius: 50%;
+					border: .2rem solid #9a8683;
+					width: 100%;
+				}
+			}
+
+			> .intro-header {
+				padding: 5% 0 0 5%;
+				width: 70%;
+				> h1 {
+					margin-bottom: 1rem;
+				}
+			}
+
+			> .intro-content {
+				width: 100%;
+				> p {
+					margin: 2rem 0;
+				}
+				> button {
+					background-color: #575a4b;
+					border-radius: .5rem;
+					border: none;
+					color: whitesmoke;
+					font-weight: bold;
+					padding: .8rem 1.6rem;
+					font-family: 'Charm', cursive, sans-serif;
+				}
+			}
+		}
+		> .about {
+			.l-segment;
+			.l-horizon;
+		}
+		> .skills {
+			.l-segment;
+			.l-horizon;
+			> ul {
+				list-style: georgian inside url('img/bullet.svg');
+				line-height: 2;
+			}
+		}
+		> .work-history {
+			.l-segment;
+			.l-horizon;
+			> .work-table {
+				.m-flex(space-between, flex-start);
+				width: 100%;
+				> .work-row {
+					.m-flex(center, space-between, nowrap, column);
+					width: 20%;
+					> span {
+						margin-bottom: 3rem;
+					}
+					> span:last-child {
+						margin-bottom: 0;
+					}
+					> span:first-child {
+						text-decoration: underline;
+						font-weight: bolder;
+					}
+				}
+			}
+		}
+	}
+}
+
+// State \\
+
+.is-selected {
+	color: #29292b;
+	text-decoration: underline;
+}
